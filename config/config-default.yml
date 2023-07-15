@@ -1,0 +1,49 @@
+env: "dev"
+name: "web-tpl"
+http:
+  listen: ":8080"
+log:
+  level: "debug"
+
+db:
+  default:
+    log:
+      enable: true
+      level: "warn"
+      format: "text" # json or text
+      type: "stdout" # stdout or file
+      path: "logs/sql-default.log"
+    write:
+      enable_sql:
+      host: "localhost"
+      port: "3306"
+      database: "blog"
+      username: "blog"
+      password: "123456"
+      charset: "utf8mb4"
+      timeout: 5000        # connect db timeout, unit: ms
+      write_time_out: 5000  # write data timeout, unit: ms
+      read_time_out: 5000   # read data timeout, unit: ms
+      max_idle_conns: 5      # the max idle connect count
+      max_open_conns: 1000      # the max open connect count
+    read:
+      host: ""
+      port: "3306"
+      database: ""
+      username: ""
+      password: ""
+      charset: "utf8mb4"
+      timeout: 5000        # connect db timeout, unit: ms
+      write_time_out: 5000  # write data timeout, unit: ms
+      read_time_out: 5000   # read data timeout, unit: ms
+      max_idle_conns: 5      # the max idle connect count
+      max_open_conns: 1000      # the max open connect count
+  # :
+web_server_log:
+  enable: true
+  log_id_show_header: true
+  log_path: "logs/access.log"
+  log_format: "text" # text, json
+  output: "file" # file, stdout
+  skip_paths:
+    - "/favicon.ico"

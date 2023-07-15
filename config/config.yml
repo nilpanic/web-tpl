@@ -1,0 +1,13 @@
+env: "dev"
+http:
+  enable: false
+  listen: ":3000"
+
+web_server_log:
+  enable: true
+  log_id_show_header: true
+  log_path: "logs/access.log"
+  log_format: "text" # text, json
+  output: "stdout" # file, stdout
+  skip_paths:
+    - "/favicon.ico"
