@@ -2,9 +2,10 @@ package app
 
 import (
 	"fmt"
+	"web-tpl/app/core/log"
 
+	"github.com/sirupsen/logrus"
 	"gorm.io/gorm"
-
 	"web-tpl/app/core/config"
 	"web-tpl/app/core/db"
 )
@@ -47,4 +48,8 @@ func DBR(keys ...string) *gorm.DB {
 	cacheKey := fmt.Sprintf("%s_read", k)
 
 	return db.Load(conf.Read, conf.Log, cacheKey, Config.Env, Config.HomeDir)
+}
+
+func Log(keys ...string) *logrus.Entry {
+	return log.Load(Config.HomeDir, Config.Log, Config.Env)
 }

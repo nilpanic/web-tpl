@@ -2,16 +2,13 @@ package home
 
 import (
 	"github.com/gin-gonic/gin"
-
-	"web-tpl/app/http/models"
+	"web-tpl/app"
 )
 
 func Index(ctx *gin.Context) {
-	var rel []models.User
-
-
+	// app.log
+	app.Log().Info("hello world")
 	ctx.JSON(200, gin.H{
-		"code": 0,
-		"data": rel,
+		"message": "hello world",
 	})
 }

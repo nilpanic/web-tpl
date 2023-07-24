@@ -11,3 +11,8 @@ web_server_log:
   output: "stdout" # file, stdout
   skip_paths:
     - "/favicon.ico"
+log:
+  level: "debug"
+  output: "stdout" # file, stdout
+  name: "logs/app.log"
+  log_format: "json" # text, json

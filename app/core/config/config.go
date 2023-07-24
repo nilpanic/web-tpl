@@ -14,7 +14,7 @@ type Model struct {
 	HomeDir      string            `yaml:"-"`
 	Name         string            `yaml:"name" env:"GO_NAME"`
 	HTTP         http              `yaml:"http"`
-	Log          log               `yaml:"log"`
+	Log          Log               `yaml:"log"`
 	DB           map[string]dbItem `yaml:"db"`
 	WebServerLog WebServerLog      `yaml:"web_server_log"`
 }
