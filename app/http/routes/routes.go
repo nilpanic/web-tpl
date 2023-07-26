@@ -7,5 +7,5 @@ import (
 )
 
 func Reg(r *gin.Engine) {
-	r.GET("/", home.Index)
+	r.GET("/v1/user", home.Index)
 }
