@@ -13,7 +13,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/gin-gonic/gin"
+	"github.com/nilpanic/gin"
 	"github.com/rs/xid"
 
 	"web-tpl/app/core/config"

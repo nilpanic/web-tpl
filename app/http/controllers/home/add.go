@@ -6,13 +6,14 @@ import (
 	"web-tpl/app/utils/rsp"
 )
 
-func Index(ctx *gin.Context) {
-	var prams params.Add
-
-	if err := ctx.ShouldBind(&prams); err == nil {
-		rsp.JSONOk(ctx, rsp.WithData(prams))
-	} else {
+func Add(ctx *gin.Context) {
+	var p params.Add
+	err := ctx.Valid(&p)
+	if err != nil {
+		//
 		rsp.JSONErr(ctx, rsp.WithMsg(err.Error()))
+		return
 	}
 
+	rsp.JSONOk(ctx, rsp.WithData(p))
 }

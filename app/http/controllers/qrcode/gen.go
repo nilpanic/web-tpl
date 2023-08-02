@@ -4,7 +4,7 @@ import (
 	"encoding/base64"
 	"net/http"
 
-	"github.com/gin-gonic/gin"
+	"github.com/nilpanic/gin"
 	qrcode "github.com/skip2/go-qrcode"
 )
 

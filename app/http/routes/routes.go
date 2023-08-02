@@ -1,11 +1,11 @@
 package routes
 
 import (
-	"github.com/gin-gonic/gin"
+	"github.com/nilpanic/gin"
 
 	"web-tpl/app/http/controllers/home"
 )
 
 func Reg(r *gin.Engine) {
-	r.GET("/v1/user", home.Index)
+	r.POST("/v1/user/add", home.Add)
 }

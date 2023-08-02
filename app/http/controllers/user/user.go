@@ -1,6 +1,6 @@
 package user
 
-import "github.com/gin-gonic/gin"
+import "github.com/nilpanic/gin"
 
 func Login(c *gin.Context) {
 	// Auth()
