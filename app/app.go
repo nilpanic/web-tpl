@@ -2,12 +2,14 @@ package app
 
 import (
 	"fmt"
+	"github.com/go-redis/redis/v8"
 	"web-tpl/app/core/log"
 
 	"github.com/sirupsen/logrus"
 	"gorm.io/gorm"
 	"web-tpl/app/core/config"
 	"web-tpl/app/core/db"
+	rds "web-tpl/app/core/redis"
 )
 
 var Config config.Model
@@ -52,4 +54,12 @@ func DBR(keys ...string) *gorm.DB {
 
 func Log(keys ...string) *logrus.Entry {
 	return log.Load(Config.HomeDir, Config.Log, Config.Env)
+}
+
+func RedisR(key ...string) *redis.Client {
+	return rds.Load("read", &Config, key...)
+}
+
+func RedisW(key ...string) *redis.Client {
+	return rds.Load("write", &Config, key...)
 }

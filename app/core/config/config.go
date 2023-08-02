@@ -16,6 +16,7 @@ type Model struct {
 	HTTP         http              `yaml:"http"`
 	Log          Log               `yaml:"log"`
 	DB           map[string]dbItem `yaml:"db"`
+	Redis        map[string]Redis  `yaml:"redis"`
 	WebServerLog WebServerLog      `yaml:"web_server_log"`
 }
 

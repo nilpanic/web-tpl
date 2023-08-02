@@ -4,6 +4,7 @@ go 1.20
 
 require (
 	github.com/go-playground/validator/v10 v10.14.0
+	github.com/go-redis/redis/v8 v8.11.5
 	github.com/nilpanic/gin v1.9.2
 	github.com/rs/xid v1.5.0
 	github.com/sirupsen/logrus v1.9.3
@@ -15,7 +16,9 @@ require (
 
 require (
 	github.com/bytedance/sonic v1.9.1 // indirect
+	github.com/cespare/xxhash/v2 v2.1.2 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311 // indirect
+	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/gabriel-vasile/mimetype v1.4.2 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect

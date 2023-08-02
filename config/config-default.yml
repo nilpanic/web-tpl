@@ -5,6 +5,29 @@ http:
 log:
   level: "debug"
 
+redis:
+  default:
+    write:
+      addr: "127.0.0.1:3309"
+      password: ""
+      pool_size: 10
+      idle_timeout: '5000ms' # uint: ms
+      read_timeout: '3000ms' # uint: ms
+      write_timeout: '3000ms' # uint: ms
+      min_idle_conns: 5
+      retries: 3 # content retry count
+      db: 0
+    read:
+      addr: "127.0.0.1:3309"
+      password: ""
+      pool_size: 10
+      idle_timeout: '5000ms' # uint: ms
+      min_idle_conns: 5
+      read_timeout: '3000ms' # uint: ms
+      write_timeout: '3000ms' # uint: ms
+      retries: 3 # content retry count
+      db: 0
+
 db:
   default:
     log:
