@@ -3,9 +3,10 @@ package redis
 import (
 	"fmt"
 	"sync"
-	"web-tpl/app/core/config"
 
 	"github.com/go-redis/redis/v8"
+
+	"web-tpl/app/core/config"
 )
 
 var redisClientSyncMap map[string]*redis.Client
